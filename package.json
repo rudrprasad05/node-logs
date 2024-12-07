@@ -1,11 +1,30 @@
 {
-  "name": "logs",
-  "version": "1.0.0",
+  "name": "@rudrprasad05/logs",
+  "version": "1.0.13",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "description": "package to handle logs",
-  "main": "src/index.js",
+  "keywords": [
+    "express",
+    "middleware",
+    "logger",
+    "logging",
+    "HTTP"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
   },
   "author": "rudr prasad",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.2",
+    "ts-node": "^10.9.2"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0"
+  }
 }
